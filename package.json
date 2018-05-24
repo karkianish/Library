@@ -1,0 +1,25 @@
+{
+  "name": "node-library",
+  "version": "1.0.0",
+  "description": "following pluralsight course",
+  "main": "index.js",
+  "scripts": {
+    "start": "set DEBUG=app & node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint app.js"
+  },
+  "author": "Anish Karki",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^4.1.1",
+    "chalk": "^2.4.1",
+    "debug": "^3.1.0",
+    "express": "^4.16.3",
+    "jquery": "^3.3.1"
+  },
+  "devDependencies": {
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.12.0"
+  }
+}

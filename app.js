@@ -18,6 +18,18 @@ app.use(express.static(path.join(__dirname, 'public/')));
 app.use('/css', express.static(path.join(__dirname, 'node_modules/bootstrap/dist/css')));
 app.use('/js', express.static(path.join(__dirname, 'node_modules/bootstrap/dist/js')));
 app.use('/js', express.static(path.join(__dirname, 'node_modules/jquery/dist')));
+
+const bookRouter = require('./src/routes/bookRoute');
+const adminRouter = require('./src/routes/adminRouter');
+
+
+// const admingRouter = require('./src/routes/adminRouter') (nav);
+// the above statement calls require to adminRouter, which exports a function
+// and whatever the function is returned you are passing 'nav' as a param to it.
+
+app.use('/books', bookRouter);
+app.use('/admin', adminRouter);
+
 app.set('views', './src/views');
 app.set('view engine', 'ejs');
 
